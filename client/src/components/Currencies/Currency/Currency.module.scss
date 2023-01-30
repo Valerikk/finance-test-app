@@ -1,0 +1,56 @@
+$green: #098551;
+$red: #cf202f;
+$main: #0052ff;
+
+.wrapper {
+  display: flex;
+  padding: 15px;
+  border: 2px solid $main;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 100%;
+
+  &_icon {
+    transition: rotate 0.1s ease-out;
+    path {
+      fill: $green;
+    }
+
+    &_negative {
+      transform: rotate(90deg);
+      transition: rotate 1s ease-out;
+
+      path {
+        fill: $red;
+      }
+    }
+  }
+
+  &_currency {
+    padding: 3px;
+    border-radius: 5px;
+    background: $main;
+    color: #ffffff;
+  }
+
+  &_title {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &_change {
+    display: flex;
+    justify-content: space-around;
+    color: $green;
+
+    &_negative {
+      color: $red;
+    }
+  }
+}
